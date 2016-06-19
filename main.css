@@ -10,6 +10,10 @@
 	height: 140px;
 }
 
+.bannerimage {
+	height: 131px;
+	width: 1100px;
+}
 .answercontainer {
 	border: solid red 2px;
 	height: 500px;

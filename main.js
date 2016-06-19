@@ -44,8 +44,8 @@ var newHTML = "";
 // 	return [dog.title, dog.price];
 // });
 
-var currencylookup = items.filter(function(cat){                 
-	return cat.currency_code == "GBP";
+var currencylookup = items.filter(function(dog){                 
+	return dog.currency_code == "GBP";
 });
 
 var titleprice = currencylookup.map(function(things){
@@ -53,7 +53,6 @@ var titleprice = currencylookup.map(function(things){
 });
 
 var itempricelist = document.querySelector(".finaltitleprice");
-
 
 var newHTML = "";
 titleprice.forEach(function (thing) {
@@ -63,15 +62,28 @@ itempricelist.innerHTML = newHTML;
 
 
 // ========================QUESTION FOUR=========================
+// var materialslookup = items.map(function(dog) {
+// 	return dog.materials;
+// });
 
-var materialslookup = items.map(function(dog) {
-	return dog.materials;
-});
+// var woodlookup = materialslookup.includes(function(mouse)){
+// 	return mouse == "wood";
+// });
 
-var woodlookup = materialslookup.map(function(cat){
-	if (cat == "wood");
-	return cat;
-});
+
+// var materialslookup = items.filter(function(dog) {
+// 	return dog.materials == wood;
+// });
+// var woodlookup = materialslookup.includes(function(mouse)){
+// 	return mouse 
+// });
+ 
+
+
+// var woodlookup = materialslookup.map(function(cat){
+// 	if (cat == "wood");
+// 	return cat;
+// });
 
 // var woollookup = function (mouse) { 
 //   var max = null;
@@ -124,10 +136,28 @@ var whomadelookup = items.filter(function(dog){
 	return dog.who_made == "i_did";
 });
 
+var totalwhomade = whomadelookup.length;
 
-whomadelookup.reduce(function (a, b) {
-    return a + b;
-});
+var sellers = document.querySelector(".totalmade");
+
+// var newHTML = "";
+// titleprice.forEach(function (thing) {
+//   newHTML += "<p>" + totalwhomade + " were made by their sellers"  + "</p>";
+// });
+// sellers.innerHTML = totalwhomade + " were made by their sellers";
+sellers.innerHTML = totalwhomade;
+
+// var whomadelookup = function(items){
+// var filteredidids = whomadelookup(items);
+// };
+
+
+
+
+
+// whomadelookup.reduce(function (a, b) {
+//     return a + b;
+// });
 
 
 // var answer1_box = document.querySelector("#answer1")
