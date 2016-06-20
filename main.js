@@ -39,10 +39,6 @@ var newHTML = "";
 
 
 // ======================QUESTION THREE==========================
-// var currencylookup = items.forEach(function(dog){
-// 	if (dog.currency_code == "GBP");
-// 	return [dog.title, dog.price];
-// });
 
 var currencylookup = items.filter(function(dog){                 
 	return dog.currency_code == "GBP";
@@ -63,8 +59,53 @@ itempricelist.innerHTML = newHTML;
 
 // ========================QUESTION FOUR=========================
 // var materialslookup = items.map(function(dog) {
+// 	if dog.includes("wood");
+// 	return dog.title;
+// });
+
+// var materialslookup = items.map(function(dog) {
+// 	if (dog == "wood");
+// 	return dog.title;
+// });
+
+// var materialslookup = items.map(function(dog) {
+// 	if dog.materials.includes("wood");
+// return dog.title;
+// });
+
+// var materialslookup = items.map(function(dog) {
+// 	if (dog.includes("wood"));
+// 	return dog.title;
+// });
+
+// var materialslookup = items.map(function(dog) {
 // 	return dog.materials;
 // });
+
+// var woodlookup = materialslookup.includes("wood");
+// 	return title;
+
+// var materialslookup = items.map(function(dog) {
+// 	return dog.materials.includes("wood");
+// });
+
+// var titlereturn = function(mouse){
+// 	if (materialslookup == true);
+// 		return mouse.title
+// };
+// var materialslookup = items.map(function(dog) {
+// 	return dog.materials.includes("wood");
+// 	if (dog == true) {
+// 		return title;
+// 	}
+// });
+
+// var materialslookup = items.map(function(dog) {
+// 	if dog.includes(materials("wood"));
+// 		return title;	
+// });
+
+
 
 // var woodlookup = materialslookup.includes(function(mouse)){
 // 	return mouse == "wood";
@@ -139,42 +180,8 @@ var whomadelookup = items.filter(function(dog){
 var totalwhomade = whomadelookup.length;
 
 var sellers = document.querySelector(".totalmade");
-
-// var newHTML = "";
-// titleprice.forEach(function (thing) {
-//   newHTML += "<p>" + totalwhomade + " were made by their sellers"  + "</p>";
-// });
-// sellers.innerHTML = totalwhomade + " were made by their sellers";
-sellers.innerHTML = totalwhomade;
-
-// var whomadelookup = function(items){
-// var filteredidids = whomadelookup(items);
-// };
+	sellers.innerHTML = totalwhomade + " were made by their sellers";
 
 
 
 
-
-// whomadelookup.reduce(function (a, b) {
-//     return a + b;
-// });
-
-
-// var answer1_box = document.querySelector("#answer1")
-// undefined
-// answer1_box
-// <div class=​"answer" id=​"answer1">​</div>​
-// typeof answre
-// "undefined"
-// typeof answer1_box
-// "object"
-// answer1_box.innerHTML
-// ""
-// answer1_box.innerHTML = "<h1>Cool</h1>"
-// "<h1>Cool</h1>"
-// answer1_box
-// <div class=​"answer" id=​"answer1">​…​</div>​<h1>​Cool​</h1>​</div>​
-// answer1_box.innerHTML = ""
-// ""
-// items
-// [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object]
