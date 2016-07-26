@@ -58,119 +58,26 @@ itempricelist.innerHTML = newHTML;
 
 
 // ========================QUESTION FOUR=========================
-// var materialslookup = items.map(function(dog) {
-// 	if dog.includes("wood");
-// 	return dog.title;
-// });
 
-// var materialslookup = items.map(function(dog) {
-// 	if (dog == "wood");
-// 	return dog.title;
-// });
+var woodlookup = items.filter(function(item){
+return item.materials.includes ("wood") ||
+		item.materials.includes ("Wood")
 
-// var materialslookup = items.map(function(dog) {
-// 	if dog.materials.includes("wood");
-// return dog.title;
-// });
-
-// var materialslookup = items.map(function(dog) {
-// 	if (dog.includes("wood"));
-// 	return dog.title;
-// });
-
-// var materialslookup = items.map(function(dog) {
-// 	return dog.materials;
-// });
-
-// var woodlookup = materialslookup.includes("wood");
-// 	return title;
-
-// var materialslookup = items.map(function(dog) {
-// 	return dog.materials.includes("wood");
-// });
-
-// var titlereturn = function(mouse){
-// 	if (materialslookup == true);
-// 		return mouse.title
-// };
-// var materialslookup = items.map(function(dog) {
-// 	return dog.materials.includes("wood");
-// 	if (dog == true) {
-// 		return title;
-// 	}
-// });
-
-// var materialslookup = items.map(function(dog) {
-// 	if dog.includes(materials("wood"));
-// 		return title;	
-// });
+});
 
 
+// var wooditems = document.querySelector(".woodlist");
+// 	wooditems.innerHTML = woodlookup;
 
-// var woodlookup = materialslookup.includes(function(mouse)){
-// 	return mouse == "wood";
-// });
-
-
-// var materialslookup = items.filter(function(dog) {
-// 	return dog.materials == wood;
-// });
-// var woodlookup = materialslookup.includes(function(mouse)){
-// 	return mouse 
-// });
- 
-
-
-// var woodlookup = materialslookup.map(function(cat){
-// 	if (cat == "wood");
-// 	return cat;
-// });
-
-// var woollookup = function (mouse) { 
-//   var max = null;
-//   for(var index = 0; index < items.length; index++) {
-//     if (items[index] > max) { max = items[index]; }
-//   };
-// 	return mouse;
-// };
-
-// var arrayMax = function (items) {
-//   var max = null;
-//   for(var index = 0; index < items.length; index++) {
-//     if (items[index] > max) { max = items[index]; }
-//   };
-//   return max;
-// };
-
-// var woollookup = function (mouse) { 
-// if (woollookup == wool);
-// 	return mouse;
-// };
-
-
-// var woollookup = items.filter(function(cat){                 
-// 	return cat.wool;
-// });
-
-// var normalArrayMax = function (items) {
-//   var max = null;
-//   items.forEach(function (number) {
-//     if (number > max) { max = number; }
-//   });
-// };
-
-// for(int i = 0; i < array.length; i++) {
-
-//     if(word.equals(array[i]) {
-
-//        ....
-
-//     }
-
-// }
+// 	wooditems.innerHTML = newHTML;
 
 // =================QUESTION FIVE=================
-
+var filterFive = items.filter(function(obj){
+  if (obj.materials.length >= 8) {
+    console.log(obj.title + " has " + obj.materials.length + " materials");
+    console.log(obj.materials);
+  }
+})
 
 // =================QUESTION SIX==================
 var whomadelookup = items.filter(function(dog){                 
