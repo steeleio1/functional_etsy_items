@@ -59,25 +59,48 @@ itempricelist.innerHTML = newHTML;
 
 // ========================QUESTION FOUR=========================
 
-var woodlookup = items.filter(function(item){
-return item.materials.includes ("wood") ||
-		item.materials.includes ("Wood")
-
+var woodlookup = items.filter(function(item) {
+	var materials = item.materials;
+	return materials.includes("wood") || materials.includes("Wood");
+	  // return item.materials.includes ("wood") ||
+			// item.materials.includes ("Wood")
 });
 
+var wooditems = document.querySelector(".woodlist");
+var newHTML = "";
+ 	woodlookup.forEach(function(wooditem) {
+	newHTML += "<p>" + wooditem.title + " is made of wood." + "</p>";
+	wooditems.innerHTML = newHTML
+});
 
-// var wooditems = document.querySelector(".woodlist");
-// 	wooditems.innerHTML = woodlookup;
-
-// 	wooditems.innerHTML = newHTML;
+	// wooditems.innerHTML = newHTML;
 
 // =================QUESTION FIVE=================
 var filterFive = items.filter(function(obj){
-  if (obj.materials.length >= 8) {
-    console.log(obj.title + " has " + obj.materials.length + " materials");
-    console.log(obj.materials);
-  }
+  return obj.materials.length >= 8
 })
+console.log(filterFive);
+
+var questFive = document.querySelector("#answer5");
+// var altquestFive = document.querySelector(".materialsList");
+
+var newHTML = "";
+
+  filterFive.forEach(function(listitem){
+  	// console.log(listitem)
+  	console.log(listitem.materials);
+  	newHTML += "<h4 class=\"nameItemList\"><p>" + listitem.title + " has " + listitem.materials.length + " materials:" + "</p></h4>";
+  	// loop over the *materials* because it's an array. add an li to newHTML for every material
+  	newHTML += "<ul class=\"materialsList\"";
+  	listitem.materials.forEach(function (material) {
+ 		newHTML += "<li>" + material + "</li>";
+  	});
+  	newHTML += "</ul>";
+  	// materialsHTML += "<li>" + listitem.materials + "</li>";
+  });
+
+  questFive.innerHTML = newHTML;
+
 
 // =================QUESTION SIX==================
 var whomadelookup = items.filter(function(dog){                 
